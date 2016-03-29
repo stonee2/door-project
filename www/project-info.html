@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Customer Information</title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="lib/angular-local-storage/dist/angular-local-storage.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+  </head>
+  <body ng-app="starter">
+    <ion-pane>
+      <ion-header-bar class="bg-prime">
+        <div class="axeLogo">
+          <img src="/img/anixter-logo.png">
+        </div>
+      </ion-header-bar>
+      <ion-header-bar class="bar-subheader bg-primeShade">
+        <h2 class="title fontWhite textLeft">
+          <script type="text/javascript">
+            document.write(document.title);
+          </script>
+          <a class="home" href="/index.html"><img src="/img/home.png"></a>
+        </h2>
+      </ion-header-bar> 
+      <ion-content class="has-header">
+        <div id="axeMainContent">
+          <form id="project-info" name="project-info">
+            <div class="list">
+              <label class="item item-input inputArea input100">
+                <input type="text" placeholder="Customer Name" name="customerName">
+              </label>
+              <label class="item item-input inputArea  input100">
+                <input type="text" placeholder="Estimate/Job number" name="jobNumber">
+              </label>
+              <label class="item item-input inputArea  input100">
+               <input type="text" placeholder="District Number" name="districtNumber">
+              </label>
+              <label class="item item-input inputArea  input100">
+                <input type="text" placeholder="Site Street Address" name="siteAddress1">
+              </label>
+              <label class="item item-input inputArea  input100">
+                <input type="text" placeholder="Site Street Address 2"  name="siteAddress2">
+              </label>
+              <label class="item item-input inputArea  input50">
+                <input type="text" placeholder="City"  name="siteCity">
+              </label>
+              <label class="item item-input inputArea  input50">
+                <input type="text" placeholder="State" name="siteState">
+              </label>
+              <label class="item item-input inputArea  input50">
+                <input type="text" placeholder="Postal/Zip Code" name="siteZip">
+              </label>
+              <label class="item item-input inputArea  input50">
+                <input type="text" placeholder="Country" name="siteCountry">
+              </label>
+              <textarea placeholder="Scope of Work" rows="5" column="5" wrap="hard" name="scopeOfWork" class="item item-input inputArea input100"></textarea>
+              <label class="item item-input inputArea  input50">
+                <input type="text" placeholder="Voltage to be Used" name="voltage">
+              </label>
+              <label class="item item-input inputArea  input50">
+                <input type="text" placeholder="Total Number of Doors" name="numberOfdoors">
+              </label>
+            </div>
+          </form>
+      <div id="actionbtns">
+            <a href="/saved-doors.html" id="savedDoors" class="btn btn-small btn-cancel">Saved Doors</a>
+            <a href="/door-information.html" id="myProfileSave" class="btn btn-small btn-create">Add a Door</a>
+          </div>
+                  </div>
+      </ion-content>
+    </ion-pane>
+  </body>
+</html>

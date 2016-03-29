@@ -1,0 +1,279 @@
+/* Empty. Add your own CSS if you like */
+/* COLORS */
+.bg-prime {background-color: #0078c1;}
+.bg-primeShade{background-color: #054E7B;}
+.bg-secondary {background-color: #FF7700;}
+.btn-create {background-color: #FF7700}
+.btn-cancel {background-color: #666}
+.btn-action {background-color: #0078c1}
+/*text*/
+.textLeft {text-align: left !important;}
+.textCenter {text-align: center !important;}
+.textRight {text-align: right !important;}
+.fontWhite{color:white;}
+
+/* headers */
+.axeLogo img:before{
+	content: ' ';
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+.axeLogo img{
+	display: inline-block;
+	height: 30px;
+	vertical-align: middle;
+	margin: 2px 0;
+}
+.bar-subheader:before{
+	content: ' ';
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+.bar-subheader {
+    top: 43px;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 16px;
+    font-weight: bold;
+	text-transform: uppercase;
+}
+.has-subheader{
+	top: 87px;
+}
+
+/* TITLES */
+.title{
+	text-transform: uppercase;
+}
+
+.homeTitle {
+		text-align: center;
+		font-size:14px;
+		font-weight: bold;
+		color:#333;
+		outline:#fff;
+		padding-top: 18px;
+	}
+@media screen and (max-width: 750px) {
+.homeTitle {
+		font-size: 9vw;
+		line-height: 1.25;
+		margin: 0 0 20% 0; 
+	}
+}
+.door-name{
+	font-weight: bold;
+	font-size: 16px;
+}
+
+/* CARDS */
+.door-card {
+	margin-bottom: 2%;
+	width: 49%;
+	border: solid thin #666;
+	padding: 6px;
+	border-radius: 4px;
+	height:auto;
+	text-align: center;
+	float:left;
+}
+.door-card:nth-child(odd) {
+	margin-right: 2%;
+}
+
+.door-card img{
+	height: 100px;
+	width: 100px;
+	margin:0 auto;
+
+}
+/* ELEMENTS */
+.button{
+	color: white;
+	font-weight:bold;
+}
+
+.button, .button:hover, .button:visited, .button:active {
+	text-decoration: none;
+	color: white;
+}
+
+a, a:hover, a:visited, a:active {
+	text-decoration: none;
+	color: white;
+}
+pre{ white-space: pre-wrap;}
+
+/* LINKS */
+.home {
+	float:right;
+	margin-top: 7px;
+}
+
+/* SECTIONS */
+#axeMainContent {
+	padding: 2% ;
+	overflow: auto;
+}
+#homeButtons {
+	margin-top: 30vh;
+}
+.bar-footer {
+    height: 50px;
+}
+#actionbtns{
+	width:100%;
+	overflow: auto;
+	margin-bottom: 20px;
+}
+
+/*Inputs*/
+select{ 
+	height:36px;
+}
+textarea{
+	min-height: 100px;
+	resize: none;
+}
+input::-webkit-input-placeholder{
+	color:#666;
+	}
+input:-moz-placeholder { /*Firfox18- */
+	color:#666;
+}
+input::-moz-placeholder { /*Firefow 19+ */
+	color:#666;
+}
+input:-ms-input-placeholder {
+	color:#666;
+}
+
+.list{
+	overflow: auto;
+	margin-bottom: 0;
+}
+
+.inputArea{
+	border-radius: 4px;
+}
+.item-input input{
+	padding-right:0;
+}
+.item {
+	margin-bottom: 2%;
+	padding: 6px 6px 5px 6px;
+}
+.input100 img, .input75 img, .input50 img, .input25 img{
+	width:100%;
+}
+
+.input100{
+	width: 98%;
+	margin-left: 1%;
+	margin-right: 1%;
+}
+.input75{
+	width: 73%;
+	margin-left: 1%;
+	margin-right: 1%;
+}
+.input50{
+	width: 48%;
+	margin-left: 1%;
+	margin-right: 1%;
+	float:left;
+}
+.input25{
+	width: 23%;
+	margin-left: 1%;
+	margin-right: 1%;
+	float:left;
+}
+.inputInfo{
+	width:100%;
+	clear: both;
+}
+.inputInfoText50{
+	width:48%;
+	float:left;
+	margin: 0 1% 2% 2%;
+}
+.inputInfoText75{
+	width:72%;
+	float:left;
+	margin: 0 1% 2% 2%;
+}
+.inputInfoText{
+	width:100%;
+	margin: 2% 0;
+}
+
+.selectPad {
+	padding: 50px;
+}
+
+.item {
+	font-size: 14px;
+
+
+}
+.inputGroup{
+	width: 100%;
+	float: left;
+}
+.itemLabel{
+	float:left;
+	margin-top:4px;
+	color: #333;
+	line-height: 1;
+}
+
+.labelNote {
+    font-size: 8.5px;
+    float: left;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.notes{
+	font-size: 9px;
+	line-height: 1;
+}
+textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] {
+	height:25px;
+}
+
+/* btns */
+button{
+	text-transform: uppercase;
+}
+.btn a {
+	color:white;
+	text-decoration: none;
+}
+.btn-large {
+	font-size: 4vw;
+	width:100%;
+	max-width: 600px;
+}
+.btn-small {
+	font-size: 16px;
+	width: 49%;
+	float:left;
+	max-width: 288px;
+}
+.btn-small:nth-child(odd) {
+	margin: 0 2% 0 0;
+}
+
+.btn{
+	border-radius: 4px;
+	font-weight: bold;
+	padding: 10px;
+	text-transform: uppercase;
+	text-align: center;
+	margin-bottom: 2%;
+	display: inline-block;
+}

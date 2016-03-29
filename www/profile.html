@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Profile</title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="lib/angular-local-storage/dist/angular-local-storage.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+  </head>
+  <body ng-app="starter">
+    <ion-pane>
+      <ion-header-bar class="bg-prime">
+        <div class="axeLogo">
+          <img src="/img/anixter-logo.png">
+        </div>
+      </ion-header-bar>
+      <ion-header-bar class="bar-subheader bg-primeShade">
+        <h2 class="title fontWhite textLeft">
+          <script type="text/javascript">
+            document.write(document.title);
+          </script>
+          <a class="home" href="/index.html"><img src="/img/home.png"></a>
+        </h2>
+      </ion-header-bar> 
+      <ion-content class="has-header">
+        <div id="axeMainContent">
+          <form id="profile" name="profile" method="post" action="">
+            <div class="list">
+              <label class="item item-input inputArea input100">
+                <input type="text" placeholder="Name" name="userName" id="userName">
+              </label>
+              <label class="item item-input inputArea  input100">
+                <input type="text" placeholder="Company Name" name="userCompanyName" id="userCompanyName">
+              </label>
+              <label class="item item-input inputArea  input100">
+                <input type="text" placeholder="Branch Name or Number" name="userBranchID" id="userBranchID">
+              </label>
+              <label class="item item-input inputArea  input100">
+                <input type="text" placeholder="Company Street Address" name="userCompanyAddress1" id="userCompanyAddress1">
+              </label>
+               <label class="item item-input inputArea  input100">
+                <input type="text" placeholder="Street Address Line 2" name="userCompanyAddress2" id="userCompanyAddress2">
+              </label>
+              <label class="item item-input inputArea  input50" >
+               <input type="text" placeholder="City" name="userCity" id="userCity">
+              </label>
+              <label class="item item-input inputArea  input50">
+                <input type="text" placeholder="state" name="userState" id="userState">
+              </label>
+              <label class="item item-input inputArea  input50">
+                <input type="text" placeholder="Postal/Zip Code" name="userZip" id="userZip">
+              </label>
+              <label class="item item-input inputArea  input50">
+                <input type="text" placeholder="Country" name="userCountry" id="userCountry">
+              </label>
+              <label class="item item-input inputArea  input100">
+                <input type="email" placeholder="Email Address" name="userEmail" id="userEmail">
+              </label>
+              <label class="item item-input inputArea  input50">
+                <input type="tel" placeholder="Cell Phone" name="userCellP" id="userCellP">
+              </label>
+              <label class="item item-input inputArea  input50">
+                <input type="tel" placeholder="Office Phone" name="userOfficeP" id="userOfficeP">
+              </label>
+              <label class="item item-input inputArea  input100">
+                <input type="text" placeholder="Anixter Representative" name="axeRep" id="axeRep">
+              </label>
+
+          </div>
+          </form>
+          <div id="actionbtns">
+            <a href="/index.html" id="myProfileCancel" class="btn btn-small btn-cancel">Home</a>
+            <a href="/index.html" id="myProfileSave" class="btn btn-small btn-action" onclick="thanks()">save</a>
+          </div>
+          <script type="text/javascript">
+            $(document).ready(function () {
+              function init() {
+                if (localStorage["userName"]) {
+                  $('#userName').val(localStorage["userName"]);
+                }
+                if (localStorage["userCompanyName"]) {
+                  $('#userCompanyName').val(localStorage["userCompanyName"]);
+                }
+                if (localStorage["userBranchID"]) {
+                  $('#userBranchID').val(localStorage["userBranchID"]);
+                }
+                if (localStorage["userCompanyAddress1"]) {
+                  $('#userCompanyAddress1').val(localStorage["userCompanyAddress1"]);
+                }
+                if (localStorage["userCompanyAddress2"]) {
+                  $('#uuserCompanyAddress2').val(localStorage["userCompanyAddress2"]);
+                }
+                if (localStorage["userCity"]) {
+                  $('#userCity').val(localStorage["userCity"]);
+                }
+                if (localStorage["userState"]) {
+                  $('#userState').val(localStorage["userState"]);
+                }
+                if (localStorage["userZip"]) {
+                  $('#userZip').val(localStorage["userZip"]);
+                }
+                if (localStorage["userCountry"]) {
+                  $('#userCountry').val(localStorage["userCountry"]);
+                }
+                if (localStorage["userCompanyName"]) {
+                  $('#userCompanyName').val(localStorage["userCompanyName"]);
+                }
+                if (localStorage["userEmail"]) {
+                  $('#userEmail').val(localStorage["userEmail"]);
+                }
+                if (localStorage["userCellP"]) {
+                  $('#userCellP').val(localStorage["userCellP"]);
+                }
+                if (localStorage["userOfficeP"]) {
+                  $('#userOfficeP').val(localStorage["userOfficeP"]);
+                } 
+                if (localStorage["axeRep"]) {
+                  $('#axeRep').val(localStorage["axeRep"]);
+                }    
+              }
+              init();
+            });
+
+            $('.stored').keyup(function () {
+              localStorage[$(this).attr('name')] = $(this).val();
+            });
+
+            $('#localStorageTest').submit(function() {
+              localStorage.clear();
+            });
+        </script>
+    </ion-pane>
+  </body>
+</html>

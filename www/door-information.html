@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Door Information</title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="lib/angular-local-storage/dist/angular-local-storage.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+  </head>
+  <body ng-app="starter">
+    <ion-pane>
+      <ion-header-bar class="bg-prime">
+        <div class="axeLogo">
+          <img src="/img/anixter-logo.png">
+        </div>
+      </ion-header-bar>
+      <ion-header-bar class="bar-subheader bg-primeShade">
+        <h2 class="title fontWhite textLeft">
+          <script type="text/javascript">
+            document.write(document.title);
+          </script>
+          <a class="home" href="/index.html"><img src="/img/home.png"></a>
+        </h2>
+      </ion-header-bar> 
+      <ion-content class="has-header">
+        <div id="axeMainContent">
+          <h4>EXISTING OPENING INFORMATION<hr></h4>
+          <form id="door-info" name="door-info">
+            <div class="list">
+              
+              <label class="item item-input inputArea input100">
+                <input type="text" placeholder="Door Name" name="doorName" id="doorName">
+              </label>
+              
+              <label class="item item-input inputArea  input100">
+                <input type="text" placeholder="Door Location" name="doorLocation" id="doorLocation">
+              </label>
+              
+              <select value="FailOption" id="FailOption" class="item item-input inputArea  input100"> 
+                <option value="failSafe" selected="true" disabled="disabled" class="disabled">Fail Safe or Fail Secure</option>
+                <option value="failSafe">Fail Safe</option>
+                <option value="failSecure">Fail Secure</option>
+              </select>
+
+              <select value="perferredSolution" id="perferredSolution" class="item item-input inputArea  input100"> 
+                <option value="na" selected="true" disabled="disabled" class="disabled">Perferred Solution</option>
+                <option value="failSafe">Fail Safe</option>
+                <option value="failSecure">Fail Secure</option>
+              </select>
+
+              <textarea placeholder="Special Local Codes or Conditions" rows="5" column="5" wrap="hard" name="scopeOfWork" class="item item-input inputArea input100"></textarea>
+              
+              <select value="doorType" id="doorType" class="item item-input inputArea  input100"> 
+                <option value="na" selected="true" disabled="disabled" class="disabled">Door Type</option>
+                <option value="failSafe">Type1</option>
+                <option value="failSecure">Type2</option>
+              </select>
+              
+              <select value="perferredSolution" id="perferredSolution" class="item item-input inputArea  input50"> 
+                <option value="failSafe" selected="true" disabled="disabled" class="disabled">Door Material</option>
+                <option value="failSafe">Type1</option>
+                <option value="failSecure">Type2</option>
+              </select>
+              
+              <select value="perferredSolution" id="perferredSolution" class="item item-input inputArea  input50"> 
+                <option value="failSafe" selected="true" disabled="disabled" class="disabled">Door Frame Material</option>
+                <option value="failSafe">Type1</option>
+                <option value="failSecure">Type2</option>
+              </select>
+
+              <div class="inputGroup">
+                <div class="itemLabel input50">Door Size <span class="labelNote">(Required if an exit device will be necessary)</span></div>
+                <label class="item item-input inputArea  input25">
+                  <input type="text" placeholder="Width" name="doorSizeW" id="doorSizeW">
+                </label>
+                <label class="item item-input inputArea  input25">
+                  <input type="text" placeholder="Height"  name="doorSizeH" id="doorSizeH">
+                </label>
+              </div>
+
+              <div class="inputGroup">
+                <div class="itemLabel input75">Door Thickness <span class="labelNote">(Only required if the thickness appears to be non-standard)</span></div>
+                <label class="item item-input inputArea  input25">
+                  <input type="text" placeholder="Thickness"  name="siteAddress2">
+                </label>
+              </div>
+
+              <div class="inputGroup">
+                <div class="itemLabel input100">Hinge Size<span class="labelNote">(Required if a wire transfer hinge will be required; i.e. An electrified cylindrical lock will be used)</span></div>
+                <div class="input50">
+                  <img src="/img/hinge-size.png">
+                </div>
+                <label class="item item-input inputArea  input50">
+                  <input type="text" placeholder="B. Width" name="siteAddress1">
+                </label>
+                <label class="item item-input inputArea  input50">
+                  <input type="text" placeholder="A. Height"  name="siteAddress2">
+                </label>
+
+                <div class="inputGroup">
+                  <div class="itemLabel input75">Is the Door and Frame Fire Rated?<span class="labelNote">The label for a fire rated door is typically located on the hinge edge of the door. For the frame, it could be anywhere on the frame.</span></div>
+                  <select value="fireRated" id="fireRated" class="item item-input inputArea  input25"> 
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+              </div>
+
+              <div class="inputGroup">
+                  <div class="itemLabel input75">Is this Opening A Designated Fire/Egress Exit?</div>
+                  <select value="fireRated" id="fireRated" class="item item-input inputArea  input25"> 
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+              </div>
+
+              </div>
+            </div>
+          </form>
+      <div id="actionbtns">
+            <a href="#" onclick="goBack()" id="myProfileCancel" class="btn btn-small btn-cancel">Cancel</a>
+           
+            <a href="/door-info2.html" id="myProfileSave" class="btn btn-small btn-action">Save & Continue</a>
+             <script>
+              function goBack() {
+                window.history.back();
+              }
+            </script>
+          </div>
+                  </div>
+      </ion-content>
+    </ion-pane>
+  </body>
+</html>
